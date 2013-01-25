@@ -2,9 +2,9 @@ import smbus
 
 class Temp100:
     def __init__(self):
-        self.defaultBus = 0 # 0 for RPiv1, 1 for RPiv2
+        self.defaultBus = 1 # 0 for RPiv1, 1 for RPiv2
         self.bus = smbus.SMBus(self.defaultBus)
-        self.defaultAddress = 0b1001000 # 0x48 for EveAlpha
+        self.defaultAddress = 0b1001011 # 0x4b for EveAlpha
 
         self.tmp100temp   = 0b00
         self.tmp100config = 0b01
